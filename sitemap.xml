@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace each relative loc with the site's real absolute URL when a domain is available. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>index.html</loc>
+    </url>
+    <url>
+        <loc>blog.html</loc>
+    </url>
+    <url>
+        <loc>about.html</loc>
+    </url>
+    <url>
+        <loc>contact.html</loc>
+    </url>
+    <url>
+        <loc>first-journey.html</loc>
+    </url>
+    <url>
+        <loc>food-experience.html</loc>
+    </url>
+    <url>
+        <loc>life-and-everything.html</loc>
+    </url>
+</urlset>

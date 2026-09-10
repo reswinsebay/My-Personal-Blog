@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Browse the latest stories from Reswin's Journey, including experiences, food discoveries and everyday thoughts.">
+    <meta property="og:title" content="Latest Stories | Reswin's Journey">
+    <meta property="og:description" content="Browse experiences, food discoveries and thoughtful stories from Reswin's Journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:site_name" content="Reswin's Journey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Latest Stories | Reswin's Journey">
+    <meta name="twitter:description" content="Browse experiences, food discoveries and thoughtful stories from Reswin's Journey.">
+    <meta name="twitter:image" content="images/hero.jpg">
+
+    <title>Latest Stories | Reswin's Journey</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Reswin's Journey
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Blog Header -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                My Stories
+            </h1>
+
+            <p>
+                Experiences, food, thoughts and everything
+                I discover along the journey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Blog Posts -->
+
+    <section class="posts">
+
+        <h2>
+            Latest Stories
+        </h2>
+
+        <div class="blog-search-area">
+            <form class="blog-search" role="search">
+                <label class="sr-only" for="story-search">Search my stories</label>
+                <input
+                    id="story-search"
+                    type="search"
+                    placeholder="Search my stories..."
+                    autocomplete="off"
+                >
+                <button class="search-button" type="submit">Search</button>
+                <button class="clear-search" type="button" aria-label="Clear search" hidden>Clear</button>
+            </form>
+        </div>
+
+        <div class="blog-filters" role="group" aria-label="Filter stories by category">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="experiences" aria-pressed="false">Experiences</button>
+            <button class="filter-button" type="button" data-filter="food" aria-pressed="false">Food</button>
+            <button class="filter-button" type="button" data-filter="everything" aria-pressed="false">Everything</button>
+        </div>
+
+
+        <div class="post-container">
+
+
+            <!-- Post 1 -->
+
+            <article class="post" data-category="experiences">
+
+                <div class="post-image">
+                    <img src="images/hero.jpg" alt="A photo from Reswin's first journey">
+                </div>
+
+                <div class="post-content">
+
+                    <p class="post-category">Experiences</p>
+
+                    <h3>
+                        <a href="first-journey.html">
+                            My First Journey
+                        </a>
+                    </h3>
+
+                    <p class="post-date">September 8, 2026</p>
+
+                    <p class="post-excerpt">
+                        A little introduction to my journey
+                        and why I started this blog.
+                    </p>
+
+                    <a href="first-journey.html" class="read-more">
+                         Read More →
+</a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Post 2 -->
+
+            <article class="post" data-category="food">
+
+                <div class="post-image">
+                    <img src="images/hero.jpg" alt="A memorable food experience">
+                </div>
+
+                <div class="post-content">
+
+                    <p class="post-category">Food</p>
+
+                    <h3>
+                        <a href="food-experience.html">
+                            A Food Experience
+                        </a>
+                    </h3>
+
+                    <p class="post-date">September 7, 2026</p>
+
+                    <p class="post-excerpt">
+                        Exploring food, flavors and memorable
+                        places along the way.
+                    </p>
+
+                    <a href="food-experience.html" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Post 3 -->
+
+            <article class="post" data-category="everything">
+
+                <div class="post-image">
+                    <img src="images/first-journey.jpg" alt="A quiet moment from everyday life">
+                </div>
+
+                <div class="post-content">
+
+                    <p class="post-category">Everything</p>
+
+                    <h3>
+                        <a href="life-and-everything.html">
+                            More to Come
+                        </a>
+                    </h3>
+
+                    <p class="post-date">September 8, 2026</p>
+
+                    <p class="post-excerpt">
+                        Thoughts, experiences and interesting
+                        moments from everyday life.
+                    </p>
+
+                    <a href="life-and-everything.html" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+        <p class="no-stories" hidden>No stories found</p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Reswin's Journey
+        </p>
+
+        <p>
+            Stories • Food • Experiences • Everything
+        </p>
+
+    </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const posts = document.querySelectorAll('.post');
+        const searchForm = document.querySelector('.blog-search');
+        const searchInput = document.querySelector('#story-search');
+        const clearSearch = document.querySelector('.clear-search');
+        const noStories = document.querySelector('.no-stories');
+        let selectedFilter = 'all';
+
+        const updatePosts = () => {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            let visiblePosts = 0;
+
+            posts.forEach((post) => {
+                const categoryMatches =
+                    selectedFilter === 'all' ||
+                    post.dataset.category === selectedFilter;
+                const searchableText = Array.from(
+                    post.querySelectorAll('h3, .post-category, .post-excerpt')
+                )
+                    .map((element) => element.textContent)
+                    .join(' ')
+                    .toLowerCase();
+                const searchMatches = !searchTerm || searchableText.includes(searchTerm);
+                const shouldShow = categoryMatches && searchMatches;
+
+                post.hidden = !shouldShow;
+                visiblePosts += shouldShow ? 1 : 0;
+            });
+
+            noStories.hidden = visiblePosts > 0;
+            clearSearch.hidden = !searchInput.value;
+        };
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                selectedFilter = button.dataset.filter;
+
+                filterButtons.forEach((filterButton) => {
+                    const isActive = filterButton === button;
+                    filterButton.classList.toggle('active', isActive);
+                    filterButton.setAttribute('aria-pressed', isActive);
+                });
+
+                updatePosts();
+            });
+        });
+
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            updatePosts();
+        });
+
+        searchInput.addEventListener('input', updatePosts);
+
+        clearSearch.addEventListener('click', () => {
+            searchInput.value = '';
+            updatePosts();
+            searchInput.focus();
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const categoryFromUrl = params.get('category');
+
+        if (categoryFromUrl) {
+            const matchingButton = document.querySelector(
+                `.filter-button[data-filter="${categoryFromUrl}"]`
+            );
+
+            if (matchingButton) {
+                matchingButton.click();
+            }
+        }
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('show');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

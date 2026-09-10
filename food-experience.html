@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read about a memorable food experience, discovering new flavors, places and the small rituals around a meal.">
+    <meta property="og:title" content="A Food Experience | Reswin's Journey">
+    <meta property="og:description" content="A story about discovering new flavors, places and memorable moments around food.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:site_name" content="Reswin's Journey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Food Experience | Reswin's Journey">
+    <meta name="twitter:description" content="A story about discovering new flavors, places and memorable moments around food.">
+    <meta name="twitter:image" content="images/hero.jpg">
+
+    <title>A Food Experience | Reswin's Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <nav>
+        <div class="logo">Reswin's Journey</div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <article class="article">
+        <div class="article-header">
+            <p class="article-category">Food</p>
+            <h1>A Food Experience</h1>
+            <p class="article-date">September 7, 2026</p>
+        </div>
+        <div class="article-image">
+            <img src="images/hero.jpg" alt="A memorable food experience">
+        </div>
+        <div class="article-content">
+            <p>Some meals stay with you long after the last bite. They become connected to a place, a conversation, and the feeling of discovering something new.</p>
+            <h2>The joy of trying something different</h2>
+            <p>I enjoy the small rituals around food: finding a new place, studying the menu, and sharing a dish that turns out to be better than expected. Those details make an ordinary day feel like an adventure.</p>
+            <p>This is a space for the flavors, people, and places that make the journey worth remembering.</p>
+            <p class="article-signature">— Reswin</p>
+            <a href="blog.html" class="back-to-blog">
+                ← Back to Blog
+            </a>
+        </div>
+    </article>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('show');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+            });
+        });
+    </script>
+    <footer>
+        <p>© 2026 Reswin's Journey</p>
+        <p>Stories • Food • Experiences • Everything</p>
+    </footer>
+</body>
+</html>

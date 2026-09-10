@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read thoughts about everyday life, small discoveries and the moments that make an ordinary day interesting.">
+    <meta property="og:title" content="Life &amp; Everything | Reswin's Journey">
+    <meta property="og:description" content="Thoughts, questions and small discoveries from everyday life.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="images/first-journey.jpg">
+    <meta property="og:site_name" content="Reswin's Journey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Life &amp; Everything | Reswin's Journey">
+    <meta name="twitter:description" content="Thoughts, questions and small discoveries from everyday life.">
+    <meta name="twitter:image" content="images/first-journey.jpg">
+
+    <title>Life &amp; Everything | Reswin's Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <nav>
+        <div class="logo">Reswin's Journey</div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <article class="article">
+        <div class="article-header">
+            <p class="article-category">Thoughts</p>
+            <h1>Life &amp; Everything</h1>
+            <p class="article-date">September 7, 2026</p>
+        </div>
+        <div class="article-image">
+            <img src="images/first-journey.jpg" alt="A quiet moment from everyday life">
+        </div>
+        <div class="article-content">
+            <p>Not every story needs a grand setting. Sometimes the most meaningful moments are the ones hiding inside an ordinary day.</p>
+            <h2>Paying attention</h2>
+            <p>A good conversation, a familiar street, or a sudden idea can change the shape of a day. Writing these moments down helps me notice the details I might otherwise rush past.</p>
+            <p>Here I will collect the thoughts, questions, and small discoveries that do not fit neatly into any other category.</p>
+            <p class="article-signature">— Reswin</p>
+            <a href="blog.html" class="back-to-blog">
+                ← Back to Blog
+            </a>
+        </div>
+    </article>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('show');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+            });
+        });
+    </script>
+    <footer>
+        <p>© 2026 Reswin's Journey</p>
+        <p>Stories • Food • Experiences • Everything</p>
+    </footer>
+</body>
+</html>

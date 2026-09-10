@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Get in touch with Reswin's Journey to share a thought, recommend a food discovery or start a conversation.">
+    <meta property="og:title" content="Contact Reswin's Journey">
+    <meta property="og:description" content="Share a thought, recommend a food discovery or start a conversation with Reswin's Journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:site_name" content="Reswin's Journey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Reswin's Journey">
+    <meta name="twitter:description" content="Share a thought, recommend a food discovery or start a conversation with Reswin's Journey.">
+    <meta name="twitter:image" content="images/hero.jpg">
+
+    <title>Contact Reswin's Journey | Start a Conversation</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Reswin's Journey
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Contact Header -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Get In Touch
+            </h1>
+
+            <p>
+                Have something to say? I'd love to hear from you.
+                Bring a question, a recommendation or a story from
+                your own journey.
+            </p>
+
+        </div>
+
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        /* Mobile menu */
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('show');
+
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute(
+                'aria-label',
+                isOpen ? 'Close menu' : 'Open menu'
+            );
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+            });
+        });
+
+
+        /* Contact form */
+
+        const contactForm = document.querySelector('#contact-form');
+        const formStatus = document.querySelector('#form-status');
+
+        contactForm.addEventListener('submit', async (event) => {
+
+            event.preventDefault();
+
+            const submitButton =
+                contactForm.querySelector('button[type="submit"]');
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            formStatus.textContent = '';
+
+            try {
+
+                const response = await fetch(
+                    contactForm.action,
+                    {
+                        method: 'POST',
+                        body: new FormData(contactForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }
+                );
+
+                if (response.ok) {
+
+                    formStatus.textContent =
+                        '✅ Thank you! Your message has been sent successfully.';
+
+                    contactForm.reset();
+
+                } else {
+
+                    formStatus.textContent =
+                        '❌ Something went wrong. Please try again.';
+
+                }
+
+            } catch (error) {
+
+                formStatus.textContent =
+                    '❌ Unable to send your message. Please try again.';
+
+            }
+
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message →';
+
+        });
+
+    });
+    </script>
+
+
+    <!-- Contact Section -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+
+            <div class="contact-info">
+
+                <h2>
+                    Let's Connect
+                </h2>
+
+                <p>
+                    Have a story to share, a food discovery to recommend,
+                    or a thought about something you read? Send a message
+                    using the form. A simple hello is welcome too.
+                </p>
+
+                <div class="contact-item">
+                    ✉️
+                    <span>
+                        Share a thought
+                    </span>
+                </div>
+
+                <div class="contact-item">
+                    ✨
+                    <span>
+                        Start a conversation
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Contact Form -->
+
+            <div class="contact-form">
+
+                <form
+                    id="contact-form"
+                    action="https://formspree.io/f/mzebklok"
+                    method="POST"
+                    aria-label="Contact Reswin's Journey">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+
+
+                    <label for="email">
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What would you like to talk about?"
+                        required
+                    >
+
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Send Message →
+                    </button>
+
+                </form>
+                <p id="form-status" class="form-status" aria-live="polite"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Reswin's Journey
+        </p>
+
+        <p>
+            Stories • Food • Experiences • Everything
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

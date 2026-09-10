@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Learn about Reswin's Journey, a personal space for experiences, food discoveries, reflections and everyday moments.">
+    <meta property="og:title" content="About Reswin's Journey">
+    <meta property="og:description" content="Learn about the ideas and interests behind Reswin's Journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:site_name" content="Reswin's Journey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Reswin's Journey">
+    <meta name="twitter:description" content="Learn about the ideas and interests behind Reswin's Journey.">
+    <meta name="twitter:image" content="images/hero.jpg">
+
+    <title>About Reswin's Journey | Stories and Discoveries</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Reswin's Journey
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- About Header -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                About Me
+            </h1>
+
+            <p>
+                A little bit about the person behind
+                Reswin's Journey.
+            </p>
+
+        </div>
+
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('show');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+            });
+        });
+    </script>
+
+
+    <!-- About Content -->
+
+    <section class="about-section">
+
+        <div class="about-content">
+
+            <div class="about-placeholder">
+                👋
+            </div>
+
+
+            <div class="about-text">
+
+                <h2>
+                    Hello, I'm Reswin.
+                </h2>
+
+                <p>
+                    Welcome to Reswin's Journey, a personal space for
+                    noticing the moments that make life interesting.
+                </p>
+
+                <p>
+                    I created this blog to collect the experiences,
+                    discoveries and reflections I want to remember and
+                    share. Each story is an invitation to slow down,
+                    look closer and find meaning in the everyday.
+                </p>
+
+                <p>
+                    You will find personal experiences, food discoveries,
+                    thoughtful observations and the occasional idea that
+                    stays with me. The subjects may change, but the aim
+                    remains the same: to tell honest stories with warmth
+                    and curiosity.
+                </p>
+
+                <p>
+                    This page is also a placeholder for the details that
+                    make the journey uniquely mine. In time, I may add
+                    more about <strong>[a place, interest or personal detail]</strong>
+                    when it feels right to share.
+                </p>
+
+                <p>
+                    For now, thank you for being here. I hope you find a
+                    story that makes you pause, smile or see something
+                    familiar in a new way.
+                </p>
+
+                <p class="about-signature">
+                    — Reswin
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- What I Write About -->
+
+    <section class="categories">
+
+        <h2>
+            What I Write About
+        </h2>
+
+
+        <div class="category-container">
+
+
+            <div class="category">
+
+                <span>🌍</span>
+
+                <h3>
+                    Experiences
+                </h3>
+
+                <p>
+                    Moments, adventures and experiences that are worth
+                    remembering.
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>🍕</span>
+
+                <h3>
+                    Food
+                </h3>
+
+                <p>
+                    Flavors, places and memorable discoveries from the
+                    table.
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>💭</span>
+
+                <h3>
+                    Thoughts
+                </h3>
+
+                <p>
+                    Questions, reflections and ideas that stay with me.
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>✨</span>
+
+                <h3>
+                    Everything
+                </h3>
+
+                <p>
+                    The interesting details that do not fit neatly into
+                    one category.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Reswin's Journey
+        </p>
+
+        <p>
+            Stories • Food • Experiences • Everything
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

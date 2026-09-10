@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Reswin's Journey: personal stories, experiences, food discoveries and thoughts from everyday life.">
+    <meta property="og:title" content="Reswin's Journey | Stories, Food and Experiences">
+    <meta property="og:description" content="Personal stories, experiences, food discoveries and thoughts from Reswin's journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:site_name" content="Reswin's Journey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reswin's Journey | Stories, Food and Experiences">
+    <meta name="twitter:description" content="Personal stories, experiences, food discoveries and thoughts from Reswin's journey.">
+    <meta name="twitter:image" content="images/hero.jpg">
+
+    <title>Reswin's Journey | Stories, Food and Experiences</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Reswin's Journey
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Welcome to Reswin's Journey
+        </h1>
+
+        <p>
+            Stories, experiences, food and everything
+            interesting I discover along the way.
+        </p>
+
+        <a href="blog.html" class="hero-button">
+            Explore My Journey →
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img src="images/hero.jpg"
+             alt="Reswin's Journey">
+
+    </div>
+
+</section>
+
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <h2>
+            What You'll Find Here
+        </h2>
+
+        <div class="category-container">
+
+            <a href="blog.html?category=experiences" class="category">
+
+                <span>🌍</span>
+
+                <h3>
+                    Experiences
+                </h3>
+
+                <p>
+                    Stories and experiences from my journey.
+                </p>
+
+            </a>
+
+
+            <a href="blog.html?category=food" class="category">
+
+                <span>🍔</span>
+
+                <h3>
+                    Food
+                </h3>
+
+                <p>
+                    Food discoveries, reviews and favorites.
+                </p>
+
+            </a>
+
+
+            <a href="blog.html?category=everything" class="category">
+
+                <span>✨</span>
+
+                <h3>
+                    Everything
+                </h3>
+
+                <p>
+                    Random thoughts, ideas and interesting things.
+                </p>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('show');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+            });
+        });
+    </script>
+
+
+    <!-- Blog Posts -->
+
+    <section class="posts">
+
+        <h2>
+            Latest Stories
+        </h2>
+
+        <div class="post-container">
+
+
+            <article class="post">
+
+                <div class="post-image">
+    <img src="images/first-journey.jpg"
+            alt="A photo from Reswin's first journey">
+</div>
+
+                <div class="post-content">
+
+                    <h3>
+                        My First Journey
+                    </h3>
+
+                    <p>
+                        A little introduction to my journey
+                        and why I started this blog.
+                    </p>
+
+                    <a href="first-journey.html" class="read-more">
+    Read More →
+</a>
+
+                </div>
+
+            </article>
+
+
+            <article class="post">
+
+                <div class="post-image">
+                    <img src="images/hero.jpg" alt="A memorable food experience">
+                </div>
+
+                <div class="post-content">
+
+                    <h3>
+                        A Food Experience
+                    </h3>
+
+                    <p>
+                        Exploring food, flavors and memorable
+                        places along the way.
+                    </p>
+
+                    <a href="food-experience.html" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="post">
+
+                <div class="post-image">
+                    <img src="images/first-journey.jpg" alt="A quiet moment from everyday life">
+                </div>
+
+                <div class="post-content">
+
+                    <h3>
+                        More to Come
+                    </h3>
+
+                    <p>
+                        This space will soon be filled with
+                        stories from my journey.
+                    </p>
+
+                    <a href="life-and-everything.html" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Reswin's Journey
+        </p>
+
+        <p>
+            Stories • Food • Experiences • Everything
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

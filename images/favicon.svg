@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Reswin's Journey favicon">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8d7c4"/>
+      <stop offset="0.55" stop-color="#f6c5ac"/>
+      <stop offset="1" stop-color="#d8e7ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#background)"/>
+  <circle cx="49" cy="15" r="7" fill="#e05d44" opacity="0.9"/>
+  <path d="M19 49V15h13c9 0 14 4 14 11 0 5-3 9-8 10l10 13H38l-9-12h-2v12H19Zm8-19h4c4 0 7-1 7-4s-3-4-7-4h-4v8Z" fill="#1e293b"/>
+</svg>
