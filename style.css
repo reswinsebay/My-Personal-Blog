@@ -92,6 +92,12 @@ footer { background: var(--ink); color: #fff; font-family: Arial, sans-serif; pa
 .article-content p { color: #46515c; font-size: clamp(1rem, 1.5vw, 1.12rem); line-height: 1.9; margin-bottom: 25px; }
 .article-content h2 { font-size: 2rem; margin: 45px 0 20px; }
 .article-signature, .about-signature { color: var(--accent-dark) !important; font-size: 1.35rem !important; font-weight: bold; }
+.story-navigation { border-top: 1px solid var(--line); display: flex; gap: 24px; justify-content: space-between; margin: auto; max-width: 750px; padding: 28px 20px 80px; }
+.story-link { color: var(--accent-dark); display: flex; flex-direction: column; max-width: 48%; text-decoration: none; }
+.story-link.next-story { margin-left: auto; text-align: right; }
+.story-direction { color: var(--muted); font-family: Arial, sans-serif; font-size: 0.78rem; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; }
+.story-title { font-family: Georgia, 'Times New Roman', serif; font-size: 1.2rem; font-weight: bold; margin-top: 5px; }
+.story-link:hover .story-title, .story-link:focus-visible .story-title { color: var(--accent); }
 
 .about-content, .contact-container { align-items: center; display: flex; gap: 70px; margin: auto; max-width: 1000px; }
 .about-placeholder { align-items: center; background: linear-gradient(135deg, var(--peach), var(--blue)); border: 10px solid var(--surface); border-radius: 50%; box-shadow: var(--shadow); display: flex; flex: 0 0 280px; flex-direction: column; font-size: 6rem; height: 280px; justify-content: center; overflow: hidden; position: relative; transition: box-shadow 0.25s ease, transform 0.25s ease; }
@@ -124,6 +130,9 @@ footer { background: var(--ink); color: #fff; font-family: Arial, sans-serif; pa
     .article-header { padding-top: 60px; }
     .article-image { height: 250px; width: 90%; }
     .article-meta { align-items: flex-start; flex-direction: column; gap: 4px; margin-bottom: 18px; }
+    .story-navigation { flex-direction: column; gap: 22px; padding-bottom: 60px; }
+    .story-link { max-width: 100%; }
+    .story-link.next-story { margin-left: 0; text-align: left; }
     footer { padding: 38px 6% 26px; }
     .footer-inner { flex-direction: column; gap: 22px; }
     .footer-brand { text-align: center; }
