@@ -35,6 +35,14 @@ nav a:hover, nav a:focus-visible, .read-more:hover, .read-more:focus-visible { c
 .categories { text-align: center; }
 .categories h2, .posts h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 40px; }
 .category-container, .post-container { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+.featured-story { align-items: stretch; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); margin: -8px auto 42px; max-width: 920px; overflow: hidden; }
+.featured-story-image { min-height: 280px; }
+.featured-story-image img { display: block; height: 100%; object-fit: cover; width: 100%; }
+.featured-story-content { align-items: flex-start; display: flex; flex-direction: column; justify-content: center; padding: clamp(28px, 5vw, 52px); }
+.featured-story-content h3 { font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.1; margin-bottom: 18px; }
+.featured-story-content p:not(.post-category) { color: var(--muted); margin-bottom: 24px; }
+.featured-story-link { background: var(--accent); border-radius: 4px; color: #fff; display: inline-block; font-family: Arial, sans-serif; font-weight: bold; padding: 12px 17px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+.featured-story-link:hover, .featured-story-link:focus-visible { background: var(--accent-dark); transform: translateY(-2px); }
 .blog-search-area { display: flex; justify-content: center; margin: -16px auto 18px; }
 .blog-search { display: flex; gap: 8px; max-width: 620px; width: 100%; }
 .blog-search input { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; color: var(--ink); flex: 1; font: inherit; min-width: 0; padding: 12px 14px; }
@@ -130,6 +138,9 @@ footer { background: var(--ink); color: #fff; font-family: Arial, sans-serif; pa
     .article-header { padding-top: 60px; }
     .article-image { height: 250px; width: 90%; }
     .article-meta { align-items: flex-start; flex-direction: column; gap: 4px; margin-bottom: 18px; }
+    .featured-story { grid-template-columns: 1fr; margin-top: -4px; }
+    .featured-story-image { min-height: 220px; }
+    .featured-story-content { padding: 28px 24px; }
     .story-navigation { flex-direction: column; gap: 22px; padding-bottom: 60px; }
     .story-link { max-width: 100%; }
     .story-link.next-story { margin-left: 0; text-align: left; }
